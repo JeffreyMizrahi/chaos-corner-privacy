@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Corner - Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0A0A0F;
+            color: #B0B0C0;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── Background glow blobs ── */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .bg-glow::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            left: 30%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,45,106,0.12) 0%, transparent 70%);
+            animation: glowDrift 6s ease-in-out infinite alternate;
+        }
+        .bg-glow::after {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: 25%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(177,78,255,0.12) 0%, transparent 70%);
+            animation: glowDrift 6s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes glowDrift {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(20px, 15px); }
+        }
+
+        /* ── Main card ── */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .card {
+            background: #12121A;
+            border: 1px solid #2A2A3A;
+            border-radius: 16px;
+            padding: 40px 36px;
+            box-shadow: 0 0 40px rgba(255,45,106,0.04), 0 4px 32px rgba(0,0,0,0.4);
+        }
+
+        /* ── Banner inside card ── */
+        .banner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 28px;
+        }
+        .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .logo-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #FF2D6A, #B14EFF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 24px rgba(255,45,106,0.35), 0 0 48px rgba(177,78,255,0.15);
+            animation: iconGlow 3s ease-in-out infinite alternate;
+        }
+        @keyframes iconGlow {
+            0%   { box-shadow: 0 0 16px rgba(255,45,106,0.3), 0 0 32px rgba(177,78,255,0.1); }
+            100% { box-shadow: 0 0 28px rgba(255,45,106,0.5), 0 0 56px rgba(177,78,255,0.2); }
+        }
+        .logo-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-chaos {
+            font-family: 'Orbitron', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1;
+            background: linear-gradient(135deg, #FF2D6A, #B14EFF, #00D4FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo-corner {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #B0B0C0;
+            letter-spacing: 4px;
+            line-height: 1;
+        }
+        .tagline {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #606070;
+            letter-spacing: 2px;
+        }
+
+        .card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        .card-subtitle {
+            font-size: 14px;
+            color: #606070;
+            margin-bottom: 0;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        /* ── Section headings ── */
+        h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-left: 14px;
+            border-left: 3px solid #FF2D6A;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Body text ── */
+        p {
+            color: #B0B0C0;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            color: #B0B0C0;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        a {
+            color: #B14EFF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #FF2D6A;
+            text-decoration: underline;
+        }
+
+        /* ── Data table ── */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px;
+        }
+        .data-table th {
+            text-align: left;
+            padding: 12px 14px;
+            color: #FF2D6A;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #2A2A3A;
+            background: rgba(255,45,106,0.04);
+        }
+        .data-table td {
+            padding: 12px 14px;
+            color: #B0B0C0;
+            border-bottom: 1px solid rgba(42,42,58,0.5);
+        }
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ── Highlight box (what we DON'T collect) ── */
+        .highlight-box {
+            background: rgba(177,78,255,0.06);
+            border: 1px solid rgba(177,78,255,0.15);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+        .highlight-box p,
+        .highlight-box li {
+            color: #c4a0ff;
+        }
+
+        /* ── Warning box (responsible play) ── */
+        .warning-box {
+            background: rgba(255,45,106,0.06);
+            border: 1px solid rgba(255,45,106,0.2);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+        .warning-box p,
+        .warning-box li {
+            color: #ffb3c1;
+        }
+        .warning-box strong {
+            color: #FF2D6A;
+        }
+
+        /* ── Divider ── */
+        .divider {
+            height: 1px;
+            background: #2A2A3A;
+            margin: 32px 0;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 24px 20px 40px;
+            color: #606070;
+            font-size: 14px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .container { margin-top: 24px; }
+            .card { padding: 28px 20px; }
+            .logo-chaos { font-size: 24px; }
+            .logo-corner { font-size: 20px; letter-spacing: 3px; }
+            .logo-icon { width: 48px; height: 48px; }
+            .logo-icon svg { width: 28px; height: 28px; }
+            .card-title { font-size: 18px; }
+            h2 { font-size: 18px; }
+            .data-table th, .data-table td { padding: 10px 10px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <!-- ── Main Card ── -->
+    <div class="container">
+        <div class="card">
+            <!-- ── Banner ── -->
+            <div class="banner">
+                <div class="logo-row">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-chaos">CHAOS</span>
+                        <span class="logo-corner">CORNER</span>
+                    </div>
+                </div>
+                <p class="tagline">Where the chaos happens</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="card-title">Privacy Policy</div>
+            <p class="card-subtitle">18+ Party Games &bull; Last updated: February 2026</p>
+
+            <div class="divider"></div>
+
+            <h2>1. Introduction</h2>
+            <p>Chaos Corner ("we", "our", "the app") is an 18+ party games application. We are committed to protecting your privacy and being transparent about how we handle data. This Privacy Policy explains what information is collected, how it is used, and your rights regarding that information.</p>
+            <p>By using Chaos Corner, you agree to the practices described in this policy.</p>
+
+            <h2>2. Age Requirement</h2>
+            <p>Chaos Corner is intended <strong>exclusively for users aged 18 and older</strong>. We do not knowingly collect data from anyone under the age of 18. If you are under 18, please do not use this application.</p>
+
+            <h2>3. Data We Collect</h2>
+            <p>We collect minimal data necessary to operate the app, serve advertisements, and improve the user experience. Below is a complete breakdown:</p>
+
+            <table class="data-table">
+                <tr>
+                    <th>Data Type</th>
+                    <th>Purpose</th>
+                    <th>Collected By</th>
+                </tr>
+                <tr>
+                    <td>App usage events (screens viewed, games played, features used)</td>
+                    <td>Analytics to improve the app</td>
+                    <td>Firebase Analytics (Google)</td>
+                </tr>
+                <tr>
+                    <td>Crash logs and error reports</td>
+                    <td>Identifying and fixing bugs</td>
+                    <td>Firebase Crashlytics (Google)</td>
+                </tr>
+                <tr>
+                    <td>Advertising ID</td>
+                    <td>Serving relevant advertisements</td>
+                    <td>Google AdMob</td>
+                </tr>
+                <tr>
+                    <td>Purchase history</td>
+                    <td>Restoring in-app purchases</td>
+                    <td>Google Play / Apple App Store</td>
+                </tr>
+                <tr>
+                    <td>Device information (OS version, device model, screen size)</td>
+                    <td>App compatibility and crash diagnostics</td>
+                    <td>Firebase Crashlytics (Google)</td>
+                </tr>
+            </table>
+
+            <h2>4. Data We Do NOT Collect</h2>
+            <div class="highlight-box">
+                <p>Chaos Corner does <strong>not</strong> collect, store, or transmit any of the following:</p>
+                <ul>
+                    <li>Your name, email address, or any personal contact information</li>
+                    <li>Location data (GPS, IP-based geolocation, etc.)</li>
+                    <li>Photos, camera, or microphone data</li>
+                    <li>Contacts, call logs, or messages</li>
+                    <li>Passwords or financial information</li>
+                    <li>Player names entered in the app (these are stored locally on your device only and never transmitted)</li>
+                </ul>
+            </div>
+
+            <h2>5. Local Storage</h2>
+            <p>Chaos Corner stores the following data <strong>locally on your device only</strong> using encrypted local storage (Hive). This data never leaves your device:</p>
+            <ul>
+                <li>Player names (for convenience when starting new games)</li>
+                <li>Game settings and preferences (intensity levels, punishment categories)</li>
+                <li>Custom packs and custom prompts you create</li>
+                <li>Purchase records (for offline access to purchased content)</li>
+            </ul>
+            <p>You can clear all local data at any time by clearing the app's data in your device settings or by uninstalling the app.</p>
+
+            <h2>6. Third-Party Services</h2>
+            <p>Chaos Corner integrates the following third-party services, each governed by their own privacy policies:</p>
+            <ul>
+                <li><strong>Firebase Analytics</strong> &mdash; Collects anonymized usage data to help us understand how the app is used. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+                <li><strong>Firebase Crashlytics</strong> &mdash; Collects crash reports and device diagnostics to help us fix bugs. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+                <li><strong>Google AdMob</strong> &mdash; Serves advertisements within the app. AdMob may use your Advertising ID to show personalized ads. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                <li><strong>Google Play / Apple App Store</strong> &mdash; Handles in-app purchase transactions. We do not have access to your payment information. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> / <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
+            </ul>
+
+            <h2>7. Advertising</h2>
+            <p>Chaos Corner displays banner advertisements and interstitial (full-screen) advertisements through Google AdMob. These ads may be personalized based on your interests and activity, as determined by Google's advertising platform.</p>
+            <p>You can opt out of personalized advertising:</p>
+            <ul>
+                <li><strong>Android:</strong> Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads Personalization</li>
+                <li><strong>iOS:</strong> Settings &rarr; Privacy &amp; Security &rarr; Tracking &rarr; Disable "Allow Apps to Request to Track"</li>
+            </ul>
+            <p>Alternatively, you can remove all advertisements by purchasing the Ad-Free upgrade within the app.</p>
+
+            <h2>8. In-App Purchases</h2>
+            <p>Chaos Corner offers optional in-app purchases for additional content, including game expansions, prompt packs, punishment packs, and an ad-free experience. All transactions are processed securely through Google Play or the Apple App Store. We do not collect, process, or store any payment or financial information.</p>
+            <p>Purchases can be restored on new devices using the "Restore Purchases" feature in the app's shop, which verifies ownership through your Google or Apple account.</p>
+
+            <h2>9. Data Retention</h2>
+            <p>Analytics and crash data collected by Firebase is retained according to Google's standard retention policies (typically 14 months for Analytics, 90 days for Crashlytics). We do not maintain separate databases or servers containing user data.</p>
+
+            <h2>10. Data Security</h2>
+            <p>We take reasonable measures to protect the data associated with our app. All third-party services we use (Firebase, AdMob) employ industry-standard encryption and security practices. Local data on your device is stored using Hive, an encrypted local database.</p>
+
+            <h2>11. Children's Privacy</h2>
+            <p>Chaos Corner is rated 18+ and is not intended for children. We do not knowingly collect personal information from anyone under the age of 18. If we become aware that a child under 18 has provided us with personal data, we will take steps to remove that information.</p>
+
+            <h2>12. Your Rights</h2>
+            <p>Depending on your jurisdiction, you may have the following rights:</p>
+            <ul>
+                <li><strong>Access:</strong> Request information about data collected about you</li>
+                <li><strong>Deletion:</strong> Request deletion of your data (local data can be deleted by clearing app data or uninstalling; for Firebase data, contact us)</li>
+                <li><strong>Opt-out:</strong> Opt out of personalized advertising as described in Section 7</li>
+                <li><strong>Portability:</strong> Request a copy of your data in a portable format</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us at the email address below.</p>
+
+            <h2>13. Responsible Play</h2>
+            <div class="warning-box">
+                <p><strong>Your well-being comes first.</strong></p>
+                <p>Chaos Corner includes party game content that may reference drinking alcohol and smoking. We want to be absolutely clear:</p>
+                <ul>
+                    <li><strong>It is always okay to refuse.</strong> No game, dare, or punishment is worth compromising your health, safety, or comfort.</li>
+                    <li>If at any point you feel that you should stop drinking or smoking, <strong>please stop immediately</strong>. There is no shame in sitting out a round or switching to a non-alcoholic alternative.</li>
+                    <li>Know your limits. Play responsibly. Look after yourself and the people around you.</li>
+                    <li>Never pressure anyone into drinking, smoking, or doing anything they are uncomfortable with.</li>
+                    <li>If you or someone you know is struggling with substance use, please reach out to a local support service or helpline.</li>
+                </ul>
+                <p>Chaos Corner is meant to bring people together for fun. <strong>Your safety always comes before the game.</strong></p>
+            </div>
+
+            <h2>14. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Chaos Corner. All rights reserved.
+    </div>
+</body>
+</html>
