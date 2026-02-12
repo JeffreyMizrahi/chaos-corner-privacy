@@ -245,6 +245,41 @@
             color: #FF2D6A;
         }
 
+        /* ── Table of Contents ── */
+        .toc {
+            margin: 0 0 8px;
+        }
+        .toc-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .toc ol {
+            padding-left: 20px;
+            margin: 0;
+            columns: 2;
+            column-gap: 24px;
+        }
+        .toc li {
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #B0B0C0;
+        }
+        .toc a {
+            color: #B0B0C0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .toc a:hover {
+            color: #FF2D6A;
+        }
+        @media (max-width: 600px) {
+            .toc ol { columns: 1; }
+        }
+
         /* ── Divider ── */
         .divider {
             height: 1px;
@@ -301,16 +336,36 @@
             <div class="card-title">Privacy Policy</div>
             <p class="card-subtitle">18+ Party Games &bull; Last updated: February 2026</p>
 
+            <div class="toc">
+                <ol>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#age">Age Requirement</a></li>
+                    <li><a href="#collect">Data We Collect</a></li>
+                    <li><a href="#not-collect">Data We Do NOT Collect</a></li>
+                    <li><a href="#local">Local Storage</a></li>
+                    <li><a href="#third-party">Third-Party Services</a></li>
+                    <li><a href="#advertising">Advertising</a></li>
+                    <li><a href="#iap">In-App Purchases</a></li>
+                    <li><a href="#retention">Data Retention</a></li>
+                    <li><a href="#security">Data Security</a></li>
+                    <li><a href="#children">Children's Privacy</a></li>
+                    <li><a href="#rights">Your Rights</a></li>
+                    <li><a href="#responsible">Responsible Play</a></li>
+                    <li><a href="#changes">Changes to This Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ol>
+            </div>
+
             <div class="divider"></div>
 
-            <h2>1. Introduction</h2>
+            <h2 id="introduction">1. Introduction</h2>
             <p>Chaos Corner ("we", "our", "the app") is an 18+ party games application. We are committed to protecting your privacy and being transparent about how we handle data. This Privacy Policy explains what information is collected, how it is used, and your rights regarding that information.</p>
             <p>By using Chaos Corner, you agree to the practices described in this policy.</p>
 
-            <h2>2. Age Requirement</h2>
+            <h2 id="age">2. Age Requirement</h2>
             <p>Chaos Corner is intended <strong>exclusively for users aged 18 and older</strong>. We do not knowingly collect data from anyone under the age of 18. If you are under 18, please do not use this application.</p>
 
-            <h2>3. Data We Collect</h2>
+            <h2 id="collect">3. Data We Collect</h2>
             <p>We collect minimal data necessary to operate the app, serve advertisements, and improve the user experience. Below is a complete breakdown:</p>
 
             <table class="data-table">
@@ -346,7 +401,7 @@
                 </tr>
             </table>
 
-            <h2>4. Data We Do NOT Collect</h2>
+            <h2 id="not-collect">4. Data We Do NOT Collect</h2>
             <div class="highlight-box">
                 <p>Chaos Corner does <strong>not</strong> collect, store, or transmit any of the following:</p>
                 <ul>
@@ -359,7 +414,7 @@
                 </ul>
             </div>
 
-            <h2>5. Local Storage</h2>
+            <h2 id="local">5. Local Storage</h2>
             <p>Chaos Corner stores the following data <strong>locally on your device only</strong> using encrypted local storage (Hive). This data never leaves your device:</p>
             <ul>
                 <li>Player names (for convenience when starting new games)</li>
@@ -369,7 +424,7 @@
             </ul>
             <p>You can clear all local data at any time by clearing the app's data in your device settings or by uninstalling the app.</p>
 
-            <h2>6. Third-Party Services</h2>
+            <h2 id="third-party">6. Third-Party Services</h2>
             <p>Chaos Corner integrates the following third-party services, each governed by their own privacy policies:</p>
             <ul>
                 <li><strong>Firebase Analytics</strong> &mdash; Collects anonymized usage data to help us understand how the app is used. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
@@ -378,7 +433,7 @@
                 <li><strong>Google Play / Apple App Store</strong> &mdash; Handles in-app purchase transactions. We do not have access to your payment information. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> / <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
             </ul>
 
-            <h2>7. Advertising</h2>
+            <h2 id="advertising">7. Advertising</h2>
             <p>Chaos Corner displays banner advertisements and interstitial (full-screen) advertisements through Google AdMob. These ads may be personalized based on your interests and activity, as determined by Google's advertising platform.</p>
             <p>You can opt out of personalized advertising:</p>
             <ul>
@@ -387,20 +442,20 @@
             </ul>
             <p>Alternatively, you can remove all advertisements by purchasing the Ad-Free upgrade within the app.</p>
 
-            <h2>8. In-App Purchases</h2>
+            <h2 id="iap">8. In-App Purchases</h2>
             <p>Chaos Corner offers optional in-app purchases for additional content, including game expansions, prompt packs, punishment packs, and an ad-free experience. All transactions are processed securely through Google Play or the Apple App Store. We do not collect, process, or store any payment or financial information.</p>
             <p>Purchases can be restored on new devices using the "Restore Purchases" feature in the app's shop, which verifies ownership through your Google or Apple account.</p>
 
-            <h2>9. Data Retention</h2>
+            <h2 id="retention">9. Data Retention</h2>
             <p>Analytics and crash data collected by Firebase is retained according to Google's standard retention policies (typically 14 months for Analytics, 90 days for Crashlytics). We do not maintain separate databases or servers containing user data.</p>
 
-            <h2>10. Data Security</h2>
+            <h2 id="security">10. Data Security</h2>
             <p>We take reasonable measures to protect the data associated with our app. All third-party services we use (Firebase, AdMob) employ industry-standard encryption and security practices. Local data on your device is stored using Hive, an encrypted local database.</p>
 
-            <h2>11. Children's Privacy</h2>
+            <h2 id="children">11. Children's Privacy</h2>
             <p>Chaos Corner is rated 18+ and is not intended for children. We do not knowingly collect personal information from anyone under the age of 18. If we become aware that a child under 18 has provided us with personal data, we will take steps to remove that information.</p>
 
-            <h2>12. Your Rights</h2>
+            <h2 id="rights">12. Your Rights</h2>
             <p>Depending on your jurisdiction, you may have the following rights:</p>
             <ul>
                 <li><strong>Access:</strong> Request information about data collected about you</li>
@@ -410,7 +465,7 @@
             </ul>
             <p>To exercise any of these rights, please contact us at the email address below.</p>
 
-            <h2>13. Responsible Play</h2>
+            <h2 id="responsible">13. Responsible Play</h2>
             <div class="warning-box">
                 <p><strong>Your well-being comes first.</strong></p>
                 <p>Chaos Corner includes party game content that may reference drinking alcohol and smoking. We want to be absolutely clear:</p>
@@ -424,13 +479,13 @@
                 <p>Chaos Corner is meant to bring people together for fun. <strong>Your safety always comes before the game.</strong></p>
             </div>
 
-            <h2>14. Changes to This Policy</h2>
+            <h2 id="changes">14. Changes to This Policy</h2>
             <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
 
-            <h2>15. Contact Us</h2>
+            <h2 id="contact">15. Contact Us</h2>
             <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:</p>
             <p><strong>Email:</strong> <a href="mailto:support@chaoscornerapp.com">support@chaoscornerapp.com</a></p>
-            
+
         </div>
     </div>
 
